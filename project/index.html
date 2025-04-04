@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Club</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #FF6F00;
+        color: #fff;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+        background: #1e1e1e;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .container.header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .auth-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .auth-buttons button {
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-color: #121212; /* Same dark background */
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .hero-image {
+        width: 50%;
+        max-width: 500px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    /* Events Section */
+    .events {
+        padding: 50px 0;
+        background: #222;
+        text-align: center;
+    }
+
+    .event-card {
+        background: #333;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .event-card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .event-info {
+        margin-top: 10px;
+    }
+
+    .register-btn {
+        background: #ff5722;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    /* About Us */
+    .about {
+        padding: 50px 0;
+        background: #1e1e1e;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .social-links a {
+        color: #ff9800;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Fusion Club Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </header><section id="home" class="hero">
+    <div class="container">
+        <h1>Welcome to Fusion Club</h1>
+        <p>Where innovation, creativity, and technology come together to build the future!</p>
+        <img src="skull.png" alt="Cybernetic Face" class="hero-image">
+    </div>
+</section>
+
+<section id="events" class="events">
+    <div class="container">
+        <h2>Explore Events</h2>
+        <div class="event-card">
+            <img src="images/event1.jpg" alt="Fusion-X AI Battle">
+            <div class="event-info">
+                <h3>Fusion-X AI Battle</h3>
+                <p>This is going to be the ultimate AI battle for you all.</p>
+                <button class="register-btn">Register Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>The Fusion Club is a dynamic community where innovation, creativity, and technology collide to shape the future.</p>
+        <p>Whether you're a coder, designer, or an innovator, Fusion Club is the place to connect, grow, and push boundaries!</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Fusion Club. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function showAlert(message) {
+        alert(message);
+    }
+
+    document.getElementById("loginBtn").addEventListener("click", function() {
+        showAlert("Login button clicked!");
+    });
+
+    document.getElementById("signupBtn").addEventListener("click", function() {
+        showAlert("Sign Up button clicked!");
+    });
+
+    document.querySelectorAll(".register-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            showAlert("You have registered for the event!");
+        });
+    });
+</script>
+
+</body>
+</html>
